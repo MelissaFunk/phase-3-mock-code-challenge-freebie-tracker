@@ -7,7 +7,7 @@ class Company < ActiveRecord::Base
   end
 
   def self.oldest_company
-    self.all.sort_by(&:founding_year).first
+    self.order("founding_year").first
   end
 end
 
